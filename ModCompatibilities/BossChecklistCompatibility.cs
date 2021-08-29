@@ -72,7 +72,7 @@ namespace FargowiltasSouls.ModCompatibilities
                 "FargowiltasSouls/NPCs/DeviBoss/DeviBoss_Head_Boss");
 
             AddBoss(ModContent.NPCType<AbomBoss>(),
-                14.01f,
+                ModLoader.GetMod("CalamityMod") != null ? 18f : 14.01f,
                 "Abominationn",
                 () => FargoSoulsWorld.downedAbom,
                 ModContent.ItemType<AbomsCurse>(),

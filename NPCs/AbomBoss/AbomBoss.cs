@@ -58,6 +58,11 @@ namespace FargowiltasSouls.NPCs.AbomBoss
             npc.buffImmune[mod.BuffType("OceanicMaul")] = true;
             npc.buffImmune[mod.BuffType("LightningRod")] = true;
             npc.timeLeft = NPC.activeTime * 30;
+            if (Fargowiltas.Instance.CalamityLoaded) {
+                npc.lifeMax = 16650000;
+                npc.damage = (int)(npc.damage * 3);
+                npc.defense *= 2;
+            }
             npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
             Mod musicMod = ModLoader.GetMod("FargowiltasMusic");
             music = musicMod != null ? ModLoader.GetMod("FargowiltasMusic").GetSoundSlot(SoundType.Music, "Sounds/Music/Stigma") : MusicID.Boss2;
