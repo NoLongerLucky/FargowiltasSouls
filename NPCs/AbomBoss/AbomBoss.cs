@@ -59,8 +59,8 @@ namespace FargowiltasSouls.NPCs.AbomBoss
             npc.buffImmune[mod.BuffType("LightningRod")] = true;
             npc.timeLeft = NPC.activeTime * 30;
             if (Fargowiltas.Instance.CalamityLoaded) {
-                npc.lifeMax = 16650000;
-                npc.damage = (int)(npc.damage * 3);
+                npc.lifeMax = 1665000;
+                npc.damage = (int)(npc.damage * 2);
                 npc.defense *= 2;
             }
             npc.GetGlobalNPC<FargoSoulsGlobalNPC>().SpecialEnchantImmune = true;
